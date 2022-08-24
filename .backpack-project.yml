@@ -1,0 +1,14 @@
+version: 1
+new:
+    shortlink: ""
+    actions:
+    - name: name
+      hook: before
+      interaction:
+        kind: input
+        prompt: name of your project
+        out: project_name
+    swaps:
+    - key: crewl
+      val_template: "{{project_name}}"
+      path: .*
